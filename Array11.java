@@ -8,10 +8,12 @@ class Array11{
 	}
 	
 	void reverse(int[] arr,int low,int high){
-		for(int i=low;i<(high+low)/2;i++){
-			int x=arr[i];
-			arr[i]=arr[high+low - i];
-			arr[high+low - i]=x;
+		while(low<=high){
+			int temp=arr[low];
+			arr[low]=arr[high];
+			arr[high]=temp;
+			low++;
+			high--;
 		}
 	}
 }
